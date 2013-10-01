@@ -1,0 +1,57 @@
+﻿
+.facebook-hub {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.facebook-content {
+    color: gray;
+    font-size: 0.8em;
+}
+
+.facebook-header {
+    display: block;
+    line-height: 14px;
+    margin-top: 3px;
+    min-width: 300px;
+}
+
+    .facebook-header div, i {
+        display: inline;
+    }
+
+        i.icon-facebook {
+            background-image: url("icons/social/rounded/facebook.png");
+        }
+
+.facebook-user {
+    min-width: 240px;
+}
+
+.facebook-name {
+    font-weight: bolder;
+    font-size: 0.8em;
+}
+
+.facebook-userid {
+    font-size: 0.8em;
+    color: lightgray;
+}
+
+.facebook-timpestamp {
+    color: gray;
+    min-width: 60px;
+    position: relative;
+    margin-top: 1px;
+    padding-right: 3px;
+    float: right;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+.facebook-content {
+    width: 100%;
+    padding-top: 5px;
+    width: 500px;
+    text-align: center;
+}

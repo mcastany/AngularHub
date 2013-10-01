@@ -1,0 +1,32 @@
+body {
+    background: #fafafa;
+    font-family: "Segoe UI";
+    color: #333;
+}
+
+i[class^="icon-"] {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    vertical-align: text-top;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.content {
+    display: table;
+    margin-bottom: 5px;
+}
+
+    .content .left-content {
+        display: table-cell;
+        padding: 3px;
+    }
+
+    .content .right-content {
+        display: table-cell;
+        padding-left: 10px;
+        vertical-align: top;
+    }
