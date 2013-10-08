@@ -1,27 +1,74 @@
-<div>
-    <menu menulist="menu" parent="menu"></menu>
+<style>
+    html, body, .container {
+        height: 100%;
+    }
+    body {
+        margin: 0;
+    }
+    .sub-container {
+        height: 100%;
+        background-color: #34495e;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+
+    .menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 300px;
+        height: 100%;
+        -webkit-transform: translate3d(-100%, 0, 0);
+        /*-webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        transition: all 0.5s;*/
+    }
+
+        .menu div {
+            background-color: red;
+            width: 100%;
+            height: 100%;
+        }
+
+    .content {
+        height: 100%;
+    }
+</style>
 
 
-    <div class="twitter-hub content">
-        <div class="left-content">
-            <i class="icon-twitter"></i>
-        </div>
-        <div class="right-content">
-            <div class="twitter-header">
-                <div class="twitter-user">
-                    <span class="twitter-name">Scott Guthrie
-                </span>
-                    <span class="twitter-userid">@ScottGuggs
-                </span>
-                </div>
-                <div class="twitter-timpestamp">7 Hours ago</div>
-            </div>
-            <div class="twitter-content">
-                <a class="hashtag" href="#">#FrasesMuyForras</a> "Me entere de algo, pero no te puedo contar"- PELOTUDO, Y SI NO PODES PARA QUE ME DECIS? PARA DEJARME CON LA MECHA? EH? EH?
-       
-            </div>
-        </div>
+<div class="sub-container">
+    <nav class="menu">
+        <div></div>
+    </nav>
+
+    <div class="content">
+        <button>Press me</button>
     </div>
+</div>
+
+
+<!-- <div class="twitter-hub content">
+            <div class="left-content">
+                <i class="icon-twitter"></i>
+            </div>
+            <div class="right-content">
+                <div class="twitter-header">
+                    <div class="twitter-user">
+                        <span class="twitter-name">Scott Guthrie
+                        </span>
+                        <span class="twitter-userid">@ScottGuggs
+                        </span>
+                    </div>
+                    <div class="twitter-timpestamp">7 Hours ago</div>
+                </div>
+                <div class="twitter-content">
+                    <a class="hashtag" href="#">#FrasesMuyForras</a> "Me entere de algo, pero no te puedo contar"- PELOTUDO, Y SI NO PODES PARA QUE ME DECIS? PARA DEJARME CON LA MECHA? EH? EH?
+       
+                </div>
+            </div>
+        </div>
 
     <div class="facebook-hub content">
         <div class="left-content">
@@ -40,5 +87,4 @@
                 <img src="http://placehold.it/500x150">
             </div>
         </div>
-    </div>
-</div>
+    </div>-->
