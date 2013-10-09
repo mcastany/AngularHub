@@ -1,7 +1,13 @@
+html {
+    height: 100%;
+}
+
 body {
     background: #fafafa;
     font-family: "Segoe UI";
     color: #333;
+    height: 100%;
+    margin: 0;
 }
 
 i[class^="icon-"] {
@@ -12,21 +18,45 @@ i[class^="icon-"] {
     vertical-align: text-top;
     background-position: center;
     background-repeat: no-repeat;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    -webkit-background-size: contain;
     background-size: contain;
 }
 
-.content {
-    display: table;
-    margin-bottom: 5px;
+.container {
+    height: 100%;
 }
 
-    .content .left-content {
-        display: table-cell;
-        padding: 3px;
+    .container .sub-container {
+        height: 100%;
+        background-color: #34495e;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
     }
 
-    .content .right-content {
-        display: table-cell;
-        padding-left: 10px;
-        vertical-align: top;
-    }
+        .container .sub-container .menu {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 300px;
+            height: 100%;
+            -webkit-transform: translate3d(-100%, 0, 0);
+            -moz-transform: translate3d(-100%, 0, 0);
+            -ms-transform: translate3d(-100%, 0, 0);
+            -o-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+        }
+
+            .container .sub-container .menu div {
+                background-color: red;
+                width: 100%;
+                height: 100%;
+            }
+
+            .container .sub-container .content{
+                height:100%;
+            }
