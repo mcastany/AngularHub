@@ -8,23 +8,32 @@ angular.module('hubApp')
           terminal: true,
           scope: {
               menulist: '=',
-              parent: '='
+              identifier: '='
           },
-          link: function postLink(scope, element, attrs) {
-              var template =
-                  '<div  class="mp-level">' +
+          controller: function ($scope) {
+              $scope.open = function (e, v) {
+                  var elem = angular.element(e.srcElement);
+                  alert("Clicked an element");
+              };
+
+              $scope.back = function (e, v) {
+                  var elem = angular.element(e.srcElement);
+                  alert("Clicked back button");
+              };
+          },
+          link: function (scope, element, attrs) {
+              var template = '<div  class="menu-container {{identifier}}">' +
                       '<h2 class="icon icon-display">' +
-                      scope.menulist.name +
-                      '</h2>' +
-                      '<a class="mp-back" href="#">back</a>';
+                        scope.menulist.name +
+                      '</h2>';
 
               if (angular.isArray(scope.menulist.elements)) {
-                  template +=
-                      '<ul>' +
-                          '<li class="icon icon-arrow-left" ng-repeat="val in menulist.elements">' +
-                          '<a href="#">{{val.name}}</a>' +
-                          '<menu menulist="val" parent="menulist" ></menu>' +
-                          '</li>' +
+                  template += '<a class="mp-back" ng-click="back($event)">Back</a>' +
+                          '<ul>' +
+                              '<li class="icon icon-arrow-left" ng-repeat="val in menulist.elements">' +
+                              '<a ng-click="open($event, val.name)">{{val.name}}</a>' +
+                                 '<menu menulist="val" identifier="val.name"></menu>' +
+                              '</li>' +
                           '</ul>';
               }
               template += '</div>';
@@ -32,22 +41,6 @@ angular.module('hubApp')
               var newElement = angular.element(template);
               $compile(newElement)(scope);
               element.replaceWith(newElement);
-
-              elem.find('li').forEach(function(el, i) {
-                  var subLevel = el.querySelector('div.mp-level');
-                  if (subLevel) {
-                      el.querySelector('a').addEventListener("click", function (ev) {
-                          ev.preventDefault();
-                          alert("Clicked an element");
-                      });
-                  }
-              });
-              
-              elem.find('.mp-back').addEventListener("click", function (ev) {
-                  ev.preventDefault();
-                  alert("Clicked back button");
-              });
-              
           }
       };
   });
