@@ -18,22 +18,5 @@ var node = { name: "Master", elements: listOfEntries };
 
 angular.module('hubApp').controller('MainCtrl', function ($scope) {
     $scope.menu = node;
-
-    var open = false,
-        initialWith = 300;
-
-    document.querySelector('button.opener').addEventListener("click", function () {
-        var valContainer = '';
-
-        if (!open) {
-            valContainer = 'translate(' + initialWith + 'px,0)';
-        } else {
-            valContainer = 'translate(0,0)';
-        }
-
-        document.querySelector('.container').style.WebkitTransform = valContainer;
-        document.querySelector('.container').style.MozTransform = valContainer;
-        document.querySelector('.container').style.transform = valContainer;
-        open = !open;
-    });
+    $scope.trigger = ".opener";
 });
