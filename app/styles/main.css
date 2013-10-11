@@ -34,7 +34,7 @@ i[class^="icon-"] {
     transition: all 0.5s;
 }
 
-    .container .menu {
+    .container .menu-level, nav {
         position: absolute;
         top: 0;
         left: 0;
@@ -50,7 +50,7 @@ i[class^="icon-"] {
         overflow: hidden;
     }
 
-        .container .menu div {
+        .container .menu-level div {
             width: 100%;
             height: 100%;
         }
