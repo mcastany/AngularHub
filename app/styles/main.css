@@ -46,8 +46,10 @@ i[class^="icon-"] {
         -ms-transform: translate3d(-100%, 0, 0);
         -o-transform: translate3d(-100%, 0, 0);
         transform: translate3d(-100%, 0, 0);
-        background-color: red;
-        overflow: hidden;
+    }
+
+    .container .menu-level {
+        background-color: orange;
     }
 
         .container .menu-level div {
@@ -58,3 +60,28 @@ i[class^="icon-"] {
     .container .content {
         height: 100%;
     }
+
+.mp-back {
+    display: block;
+    cursor: pointer;
+}
+
+.menu-level ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu-level.menu-overlaped {
+    box-shadow: 1px 0 2px rgba(0,0,0,0.2);
+    -webkit-transform: translate3d(-40px, 0, 0);
+    -moz-transform: translate3d(-40px, 0, 0);
+    transform: translate3d(-40px, 0, 0);
+    background-color: red;
+}
+
+nav > .menu-overlaped{
+     -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+} 
